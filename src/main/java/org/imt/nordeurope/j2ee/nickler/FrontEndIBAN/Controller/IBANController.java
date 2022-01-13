@@ -25,7 +25,7 @@ public class IBANController {
     }
 
     @PostMapping(value = "/checkIBAN")
-    public String getCountryTemperature(Model model, @ModelAttribute("ibanForm") IBANForm ibanForm) {
+    public String checkIBAN(Model model, @ModelAttribute("ibanForm") IBANForm ibanForm) {
         IBANValidation ibanValidation = IBANService.checkIBAN(ibanForm.getIBAN());
         model.addAttribute("iban", ibanValidation);
         return "iban";
