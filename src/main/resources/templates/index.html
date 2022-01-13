@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>IBAN</title>
+</head>
+<body>
+<h1>Renseignez un IBAN</h1>
+
+<form th:action="@{/checkIBAN}" th:object="${ibanForm}" method="POST">
+
+    <input type="text" th:field="*{IBAN}" />
+
+    <br/>
+    <input type="submit" value="Vérifier" />
+</form>
+
+</body>
+
+</html>
